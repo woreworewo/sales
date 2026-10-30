@@ -1,0 +1,13 @@
+runConfig:
+  minInstances: 0
+  maxInstances: 3
+  concurrency: 40
+  cpu: 1
+  memoryMiB: 1024
+env:
+  - variable: CRM_DEMO_MODE
+    value: "false"
+    availability: [BUILD, RUNTIME]
+  - variable: CRM_GROUP_ID
+    value: main
+    availability: [RUNTIME]
