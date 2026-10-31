@@ -11,3 +11,25 @@ env:
   - variable: CRM_GROUP_ID
     value: main
     availability: [RUNTIME]
+  - variable: APP_ORIGIN
+    value: https://sales--saleshotelcrm.asia-southeast1.hosted.app
+    availability: [RUNTIME]
+  - variable: FIREBASE_PROJECT_ID
+    value: saleshotelcrm
+    availability: [RUNTIME]
+  - variable: FIREBASE_STORAGE_BUCKET
+    value: saleshotelcrm.firebasestorage.app
+    availability: [RUNTIME]
+  # Firebase web config is public by design (not a secret).
+  - variable: NEXT_PUBLIC_FIREBASE_API_KEY
+    value: AIzaSyCS7EYZ-D4E_pYFUpjD75RHYhS6tC-GwFw
+    availability: [BUILD, RUNTIME]
+  - variable: NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
+    value: saleshotelcrm.firebaseapp.com
+    availability: [BUILD, RUNTIME]
+  - variable: NEXT_PUBLIC_FIREBASE_PROJECT_ID
+    value: saleshotelcrm
+    availability: [BUILD, RUNTIME]
+  - variable: NEXT_PUBLIC_FIREBASE_APP_ID
+    value: 1:122066114656:web:ea4e45a449624d19a38b05
+    availability: [BUILD, RUNTIME]
