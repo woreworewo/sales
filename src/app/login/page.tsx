@@ -20,7 +20,7 @@ export default async function LoginPage() {
   return (
     <main className="login-card">
       <div className="brand">
-        aruna<small>SALES WORKSPACE</small>
+        sales<small>HOTEL WORKSPACE</small>
       </div>
       <h1>Selamat datang.</h1>
       <p className="login-intro">

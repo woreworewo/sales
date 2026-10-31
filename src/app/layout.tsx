@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Aruna · Hotel Sales CRM",
+  title: "Sales · Hotel CRM",
   description: "Workspace sales dan marketing untuk grup hotel.",
   robots: { index: false, follow: false },
   icons: { icon: "/icon.svg" },

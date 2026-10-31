@@ -302,7 +302,7 @@ export async function setHotelScope(form: FormData) {
   const user = await requireUser(),
     scope = value(form, "scope");
   assertAllowed(scope === "all" || canAccessHotel(user, idSchema.parse(scope)));
-  (await cookies()).set("aruna-hotel", scope, {
+  (await cookies()).set("sales-hotel", scope, {
     httpOnly: true,
     sameSite: "lax",
     secure: process.env.NODE_ENV === "production" && !isDemoMode(),
@@ -315,6 +315,6 @@ export async function setHotelScope(form: FormData) {
 export async function logout() {
   const cookie = await cookies();
   cookie.delete(SESSION_COOKIE);
-  cookie.delete("aruna-hotel");
+  cookie.delete("sales-hotel");
   redirect("/login");
 }

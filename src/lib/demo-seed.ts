@@ -11,21 +11,21 @@ export function demoSeed(): { [K in CollectionName]: Collections[K][] } {
     hotels: [
       {
         ...meta("jakarta"),
-        name: "Aruna Jakarta",
+        name: "Hotel Jakarta",
         city: "Jakarta",
         timezone: "Asia/Jakarta",
         active: true,
       },
       {
         ...meta("bandung"),
-        name: "Aruna Bandung",
+        name: "Hotel Bandung",
         city: "Bandung",
         timezone: "Asia/Jakarta",
         active: true,
       },
       {
         ...meta("bali"),
-        name: "Aruna Bali",
+        name: "Hotel Bali",
         city: "Bali",
         timezone: "Asia/Makassar",
         active: true,

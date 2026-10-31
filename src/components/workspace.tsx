@@ -141,7 +141,7 @@ export function Workspace({ data, params }: { data: Snapshot; params: Params }) 
               <div className="row-main">
                 <strong>{t.title}</strong>
                 <small>
-                  {name(t.clientId)} · {hotel(t.hotelId).replace("Aruna ", "")} · {owner(t.ownerId)}
+                  {name(t.clientId)} · {hotel(t.hotelId)} · {owner(t.ownerId)}
                 </small>
                 <small className={t.dueDate < taskDay(t) ? "late" : ""}>
                   {t.dueDate < taskDay(t) ? "Terlambat · " : ""}
@@ -176,7 +176,7 @@ export function Workspace({ data, params }: { data: Snapshot; params: Params }) 
                 </small>
                 <small>
                   {formatDate(a.occurredAt, data.hotels.find((h) => h.id === a.hotelId)?.timezone)}{" "}
-                  · {hotel(a.hotelId).replace("Aruna ", "")}
+                  · {hotel(a.hotelId)}
                 </small>
               </span>
               <ChevronRight size={16} aria-hidden />
@@ -215,7 +215,7 @@ export function Workspace({ data, params }: { data: Snapshot; params: Params }) 
                     </small>
                   </td>
                   <td className="desktop-col">
-                    {hotel(d.hotelId).replace("Aruna ", "")}
+                    {hotel(d.hotelId)}
                     <small>{owner(d.ownerId)}</small>
                   </td>
                   <td>
@@ -350,7 +350,7 @@ export function Workspace({ data, params }: { data: Snapshot; params: Params }) 
                   <span className="row-main">
                     <strong>{d.title}</strong>
                     <small>
-                      {name(d.clientId)} · {hotel(d.hotelId).replace("Aruna ", "")}
+                      {name(d.clientId)} · {hotel(d.hotelId)}
                     </small>
                   </span>
                   <span className="row-end">
@@ -510,7 +510,7 @@ export function Workspace({ data, params }: { data: Snapshot; params: Params }) 
                 <small>
                   {c.pic} · {c.segment}
                 </small>
-                <small>{c.hotelIds.map((h) => hotel(h).replace("Aruna ", "")).join(" · ")}</small>
+                <small>{c.hotelIds.map((h) => hotel(h)).join(" · ")}</small>
               </span>
               <ChevronRight size={17} aria-hidden />
             </Link>
@@ -987,7 +987,7 @@ export function Workspace({ data, params }: { data: Snapshot; params: Params }) 
                   {u.admin
                     ? "Group Admin · Seluruh hotel"
                     : Object.entries(u.hotelAccess)
-                        .map(([h, r]) => hotel(h).replace("Aruna ", "") + ": " + roleLabel(r))
+                        .map(([h, r]) => hotel(h) + ": " + roleLabel(r))
                         .join(" · ")}
                 </small>
               </div>

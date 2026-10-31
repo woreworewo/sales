@@ -9,7 +9,7 @@ import { adminAuth } from "./firebase-admin";
 import { getRecord } from "./database";
 import { isDemoMode } from "./config";
 
-export const SESSION_COOKIE = "aruna-session";
+export const SESSION_COOKIE = "sales-session";
 export const SESSION_SECONDS = 60 * 60 * 24 * 5;
 function demoSecret() {
   const dir = join(process.cwd(), ".data");

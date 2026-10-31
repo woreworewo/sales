@@ -34,7 +34,7 @@ export function AppShell({
       </a>
       <aside className="sidebar">
         <Link href="/" className="brand">
-          aruna<small>SALES WORKSPACE</small>
+          sales<small>HOTEL WORKSPACE</small>
         </Link>
         <nav aria-label="Navigasi utama">
           {menu.map(({ id, label, icon: Icon }) => (
@@ -60,7 +60,7 @@ export function AppShell({
       <div className="app-body">
         <header className="header">
           <Link className="brand mobile-brand" href="/">
-            aruna<small>SALES WORKSPACE</small>
+            sales<small>HOTEL WORKSPACE</small>
           </Link>
           <span className="breadcrumb">
             Workspace / {menu.find((n) => n.id === view)?.label || "Lainnya"}

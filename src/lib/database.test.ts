@@ -15,7 +15,7 @@ import {
 
 test("local adapter persists records, rolls back failed mutations and isolates owner queries", async () => {
   const original = process.cwd(),
-    directory = mkdtempSync(join(tmpdir(), "aruna-crm-test-"));
+    directory = mkdtempSync(join(tmpdir(), "sales-crm-test-"));
   process.env.CRM_DEMO_MODE = "true";
   process.env.APP_ORIGIN = "http://localhost:3000";
   process.chdir(directory);
@@ -30,7 +30,7 @@ test("local adapter persists records, rolls back failed mutations and isolates o
         throw new Error("Rollback");
       }),
     );
-    assert.equal((await getRecord("hotels", "jakarta"))?.name, "Aruna Jakarta");
+    assert.equal((await getRecord("hotels", "jakarta"))?.name, "Hotel Jakarta");
     await transact(async (tx) => {
       const current = await tx.get("hotels", "jakarta");
       assert.ok(current);
@@ -79,7 +79,7 @@ test("local adapter persists records, rolls back failed mutations and isolates o
     const target = resolve(directory),
       base = resolve(tmpdir());
     assert.ok(target.startsWith(base + "\\") || target.startsWith(base + "/"));
-    assert.ok(basename(target).startsWith("aruna-crm-test-"));
+    assert.ok(basename(target).startsWith("sales-crm-test-"));
     rmSync(target, { recursive: true, force: true });
   }
 });

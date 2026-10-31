@@ -17,7 +17,7 @@ export async function loadSnapshot(actor: User): Promise<Snapshot> {
         )
       ).filter((h) => h !== null);
   const hotels = hotelRows.filter((h) => canAccessHotel(actor, h.id));
-  const requested = (await cookies()).get("aruna-hotel")?.value || "all";
+  const requested = (await cookies()).get("sales-hotel")?.value || "all";
   const scope = hotels.some((h) => h.active && h.id === requested) ? requested : "all";
   const selected = hotels.filter((h) => h.active && (scope === "all" || h.id === scope));
   let truncated = hotelRows.length > PAGE_SIZE;

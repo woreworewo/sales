@@ -1,4 +1,4 @@
-# Aruna · Hotel Sales CRM
+# Sales · Hotel CRM
 
 CRM MVP multi-hotel, Next.js App Router + TypeScript + Firebase. UI Bahasa Indonesia, responsive, compact, dan calm. Hotel dipilih melalui **Akun**, bukan header.
 
